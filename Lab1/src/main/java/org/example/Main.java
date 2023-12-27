@@ -2,16 +2,13 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        // Задання номера залікової книжки студента
         int studentId = 1318;
 
-        // Визначення остач від ділення
         int c2 = studentId % 2;
         int c3 = studentId % 3;
         int c5 = studentId % 5;
         int c7 = studentId % 7;
 
-        // Визначення операції O1
         char o1;
         if (c2 == 0) {
             o1 = '+';
@@ -19,10 +16,8 @@ public class Main {
             o1 = '-';
         }
 
-        // Визначення константи C
         int c = c3;
 
-        // Визначення операції O2
         char o2;
         switch (c5) {
             case 0:
@@ -41,24 +36,19 @@ public class Main {
                 o2 = '-';
                 break;
             default:
-                // Задати значення за замовчуванням або обробити виняток
                 o2 = '*';
         }
 
-        // Визначення типу індексів i та j
         String[] indexTypes = {"byte", "short", "int", "long", "char", "float", "double"};
         String indexType = indexTypes[c7];
 
-        // Виконання обчислень за заданою формулою
         double result = calculateResult(o1, c, o2);
 
-        // Виведення результату
         System.out.println("Результат обчислень: " + result + " з типом індексів " + indexType);
     }
 
-    // Метод для обчислення результату за формулою
     private static double calculateResult(char o1, int c, char o2) {
-        int n = 10; // Задайте необхідне значення n
+        int n = 10;
         double result = 0.0;
 
         for (int i = 0; i < n; i++) {
@@ -70,7 +60,6 @@ public class Main {
         return result;
     }
 
-    // Метод для виконання заданих операцій
     private static double performOperations(char o1, int c, char o2, int i, int j) {
         double result = 0.0;
 
